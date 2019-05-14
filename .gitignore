@@ -1,0 +1,15 @@
+*.aux
+*.log
+*.bak
+*.pdf
+*.xml
+*.sh
+*.py
+*.bbl
+*.lot
+*.bcf
+*.blg
+*.lof
+*.out
+*.toc
+auto/
