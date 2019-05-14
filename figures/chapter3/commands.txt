@@ -1,0 +1,2 @@
+inkscape fig1_anatomy.svg -A fig1_anatomy.pdf
+inkscape fig2_noise_laser.svg -A fig2_noise_laser.pdf

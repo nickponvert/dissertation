@@ -1,0 +1,57 @@
+%% \documentclass[dissertation, copyright, final, justified, numbers, sort&compress]{uothesis}
+\documentclass[dissertation, copyright, final, justified, gsmodern]{uothesis}
+%% \usepackage[english,UKenglish]{babel}
+%% \usepackage{todonotes}
+\usepackage{subfig}
+\usepackage{caption}
+\usepackage{natbib}
+\setcitestyle{round}
+
+%NOTE: I changed this to try and get the better Palatino font
+%% \usepackage{amsmath}
+\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{hyperref}
+%% \includeonly{cover, abstract, cv, acknowledgements, chapter2}
+
+%Always load this package last
+%% \usepackage{cleveref}
+
+% Figure naming macro
+\newcommand{\fig}[1]{{\bf Figure \thechapter.#1}}
+
+% Chapter naming macro
+\newcommand{\ch}[1]{{\bf Chapter #1}}
+%% \newcommand{\Musc}{2}
+%% \newcommand{\Thstr}{3}
+%% \newcommand{\Amod}{4}
+%% \newcommand{\Rev}{5}
+\newcommand{\Musc}{II}
+\newcommand{\Thstr}{III}
+\newcommand{\Amod}{IV}
+\newcommand{\Rev}{V}
+
+% Document chapter/section naming
+\renewcommand \thechapter{\Roman{chapter}}
+%% \renewcommand \thesubsection{\arabic{section}.\arabic{subsection}}
+
+\begin{document}
+
+\include{cover}
+\include{abstract}
+\include{cv}
+%% \include{acknowledgements}  %%acknowledgements page optional
+\maketitle
+
+\include{chapter1} % Introduction
+\include{chapter2} % Muscimol inactivation
+\include{chapter3} % Pathway recording
+\include{chapter4} % Amod task
+\include{chapter5} % Subcortical flexibility
+\include{chapter6} % Conclusion
+
+\bibliographystyle{jneurosci}
+\bibliography{/home/nick/library/Dissertation}%%uses BibTex formatting.
+
+\end{document}
