@@ -20,7 +20,6 @@
 
 ## `celldatabase_NBQX.h5`
 
-TODO: tract database? 
 
 # Figure 1 (Anatomy)
 ## Panel A
@@ -82,7 +81,6 @@ tracing the boundaries of desired areas.
 ## Panel E
 This panel has an image, generated from Panel D. 
 It has a set of labels of depth boundaries of layers. 
-TODO: How to generate the layer depths? 
 It has a histogram produced by the figure script (below).
 
 ## Figure script: `figure_anatomy.py`
