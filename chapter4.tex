@@ -1,3 +1,7 @@
+% Some cool additional analysis that would be nice to include if I have time. 
+%TODO: How long does it take to learn the categorization once the initial exemplars are learned? 
+%TODO: How long does it take to learn to switch after you are able to categorize? 
+%TODO: How long does it take to learn the second category after you are able to learn the first? 
 
 % Figures in this chapter
 \newcommand{\Task}{1} \newcommand{\TaskDiagram}{\Task A}
@@ -21,8 +25,8 @@ contributions to sound feature discrimination}
 \section{Introduction}
 % We found that corticostriatal and thalamostriatal pathways send different
 % information about certain sound features to the striatum. 
-% TODO: Chapter number
-In the last chapter, we found that the thalamostriatal and corticostriatal
+% DONE: Chapter number
+In \ch{\Thstr}, we found that the thalamostriatal and corticostriatal
 pathways send complementary information to the striatum about some features of
 sound. 
 %
@@ -34,8 +38,8 @@ The spiking rate of thalamostriatal neurons more closely followed rapid
 variations in stimulus amplitude, but the total number of spikes during the
 stimulus was less indicative of the modulation rate.
 % What is the significance of this difference? 
-% TODO: Chapter number
-While our earlier experiments in Chapter 2 strongly suggested a role for the
+% DONE: Chapter number
+While our earlier experiments in \ch{\Musc} strongly suggested a role for the
 striatal target region of these projections in sound-guided behavior, the
 relative contribution of these parallel pathways to behavior is unclear. 
 %
@@ -48,7 +52,7 @@ following removal of auditory cortex \citep{Deutscher2006}.
 In contrast, sound frequency discrimination behavior has been shown to persist
 after extensive lesions of AC \citep{Gimenez2015}.
 %
-% TODO: Phrase as either/or? or cortical/subcortical?
+% DONE: Phrase as either/or? or cortical/subcortical?
 We therefore hypothesized that the cortical representation of AM is necessary
 for accurate AM discrimination, but that sound frequency discrimination can be
 accomplished with auditory information from the subcortex alone. 
@@ -123,7 +127,7 @@ and tones, and 8 distinct modulation rates for AM sounds.
 Each behavioral session lasted 60 to 90 minutes.
 
 \subsection{Muscimol inactivation}
-% TODO: Change to match muscimol protocol for amod study. 
+% TODO: Change to match muscimol protocol for amod study. @internet
 Bilateral craniotomies were performed under stereotactic surgery over the
 posterior striatum (1.7 mm posterior to bregma, 3.55 mm lateral from midline)
 of mice trained in the two-alternative choice sound discrimination task.
@@ -220,9 +224,10 @@ association by letting them correct their choice if they first made a mistake.
 After animals performed well on this stage, we started requiring animals to
 make a correct choice on the first try.
 %
-% TODO: define the range
+% DONE: define the range
 When they were performing well on this stage, we began presenting a range of AM
-rates between the previously-trained fast and slow rates.
+rates between the previously-trained fast and slow rates (usually 8 rates,
+logarithmically-spaced between the slow and fast rate used in the initial training).
 %
 During this stage, animals had to learn the category boundary between the
 ``fast'' and ``slow'' rates.
@@ -233,37 +238,60 @@ of the task structure and rules.
 At this point, we began to train on two narrow-band stimuli (or pure tones for
 some animals).
 %
-We then switched to a stage where we presented a range of tonal stimuli, and
+We then switched to a stage where we presented a range of frequencies, logarithmically-
+spaced between the initial low and high frequency, and
 trained animals until they had learned the boundary between ``high'' and
 ``low'' sound frequencies as well.
 %
-% TODO: At this point is ambiguous does it mean this or the next one?
-At this point we started to introduce the next level of task complexity.
+% DONE: At this point is ambiguous does it mean this or the next one?
+After they had been trained to categorize first AM rate, and then frequency of sound,
+we started to introduce the next level of task complexity.
 
 During the next training stage, the type of sound presented when animals
 triggered a trial switched between an AM noise and a narrow-band chord (or pure
 tone) every other trial.
 %
-% TODO: Takes little time to do, which is a cool feature. Talk about that here. 
+% DONE: Takes little time to do, which is a cool feature. Talk about that here. 
 The sound-action association necessary to receive reward was the same as had
 been previously learned for each sound.
 %
 We first introduced animals to the type of sound switching by presenting only
 two examples of each sound type, but then moved on to presenting a range of AM
 rates and sound frequencies.
-% TODO: From here start to talk about performance on the psychometric version
-% of full task.
+%
+% TODO: Number of sessions it took to learn the switching.
+Animals took few sessions to learn to switch back and forth between the types 
+of stimuli they were categorizing.
 %%%%%%%%%%% Training structure table %%%%%%%%%%%%%%
 
-%% \begin{table}[]
-%% \begin{tabular}{lllll}
-%% \textbf{Stage} & \textbf{Name}       & \textbf{Goal}                              & \textbf{Water delivery}                                       & \textbf{Criterion to advance}              \\
-%% SD AM          & Sides Direct, AM    & Get animals to poke and collect water      & After center or side poke                                     & One session with 200 rewards               \\
-%% D AM           & Direct, AM          & Trial initiation in center poke            & After center poke                                             & One session with 200 rewards               \\
-%% NC AM          & On next correct, AM & Train animal on correct association        & After correct side poke (OK if incorrect poke was made first) & One session with 500 rewards               \\
-%% IC AM          & If correct, AM      & Require animal to make correct association & After correct side poke                                       & Animal performs \textgreater{}80\% correct
-%% \end{tabular}
-%% \end{table}
+%TODO: Last criterion to advance (to experiment ready)
+\begin{sidewaystable}
+%\begin{table}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllll}
+\textbf{Stage} & \textbf{Name}        & \textbf{Goal}                           & \textbf{Water delivery}       & \textbf{Criterion to advance}              \\
+SD AM          & Sides Direct, AM     & Get animals to poke and collect water   & After center or side poke     & One session with 200 rewards               \\
+D AM           & Direct, AM           & Trial initiation in center poke         & After center poke             & One session with 200 rewards               \\
+NC AM          & On next correct, AM  & Discover correct association            & After correct/ed side poke    & One session with 500 rewards               \\
+IC AM          & If correct, AM       & Enforce correct association             & After correct side poke       & Animal performs \textgreater{}80\% correct \\
+P AM           & Psychometric, AM     & Categorize AM rate                      & After correct side poke       & Animal performs \textgreater{}80\% correct \\
+IC F           & If correct, Freq     & Form association for frequency          & After correct side poke       & Animal performs \textgreater{}80\% correct \\
+P F            & Psychometric, Freq   & Categorize sound frequency              & After correct side poke       & Animal performs \textgreater{}80\% correct \\
+IC M           & If correct, Mixed    & Switch between sound types              & After correct side poke       & Animal performs \textgreater{}80\% correct \\
+P M            & Psychometric, Mixed  & Categorize both sound types             & After correct side poke       & Animal performs \textgreater{}80\% correct \\
+\end{tabular}}
+%TODO: Table caption (just review it one more time before nobody ever sees it again). 
+    \caption{Stages of behavioral shaping.}{Animals progressed through 9 behavioral training stages during behavioral shaping. Each stage was designed to teach
+    the animal a new feature of the behavioral task. Animals graduated to the next phase of training when they performed above a set criterion level. Over the first
+    three training stages, animals primarily learned about the beahvioral box and the structure of the task. After an initial session where a nose poke in any
+    of the three ports would trigger water, animals next had to learn to trigger rewards by poking in the center and then collecting the reward at the side. 
+    The sound-action association was trained over a series of three stages, where animals could initially correct a previous incorrect response and still get a reward.
+    After this stage, a correct response was required on the first poke. Once animals were capable of performing the discrimination behavior with two prototype stimuli
+    (well-separated in stimulus space), they were then tested with a range of stimuli logarithmically-spaced between the initial two prototypes, and were required to
+    learn the category boundary. Finally, once animals were capable of categorizing both AM rate and sound frequency, the sound triggered by every nose poke began to 
+    alternate between an AM noise stimulus and a tone every other trial. Animals still had to perform the previously-learned categorization on each stimulus.}
+\end{sidewaystable}
+%\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -288,7 +316,7 @@ animals were able to achieve high levels of performance.
 	%
 \textbf{(B)} The type of sound presented was alternated every other trial. 
 %
-% TODO: Make sure all other figure captions have bolded cap. labels
+% DONE: Make sure all other figure captions have bolded cap. labels
 \textbf{(C)} On trials when an AM noise stimulus was presented, mice had to
 choose the right reward port if the modulation rate was fast and the left
 reward port if the modulation rate was slow to be rewarded. On trials when a
@@ -405,7 +433,7 @@ independently.}{\textbf{(A)}  Example psychometric curve from sessions where an
 animal discriminated only high sound frequency from low sound frequency.
 Performance suffers in sessions where muscimol was injected in AC (red, 1
 session) compared to control saline injection (black, 1 session).
-% TODO: How to have number of sessions here? 
+% DONE: How to have number of sessions here? 
 %
 \textbf{(B)} Average percent correct for 4 animals during muscimol (red, 1
 session per animal) and saline (black, 1 session per animal) sessions. 
