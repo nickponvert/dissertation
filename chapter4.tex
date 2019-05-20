@@ -515,10 +515,11 @@ An area that is truly \emph{necessary} provides information that cannot be obtai
 %
 Thus, performance would still suffer after lesion, even if you allow a period for downstream circuits to adapt.
 
-\subsection{What about using optogenetics instead?} % With opto you can use the same fiber over many sessions to standardize the location of the light delivery. 
-In the experiments presented here, we chose to perform transient inactivation using muscimol instead of using optogenetic methods. 
-%
-While optogenetic methods are unparalleled in their ability to allow circuit manipulations with fine temporal resolution, we preferred to use chemical inactivation in this case because we were interested in silencing cortex for the duration of the behavioral session. 
+% \subsection{What about using optogenetics instead?} % With opto you can use the same fiber over many sessions to standardize the location of the light delivery. 
+% In the experiments presented here, we chose to perform transient inactivation using muscimol instead of using optogenetic methods. 
+% %
+% While optogenetic methods are unparalleled in their ability to allow circuit manipulations with fine temporal resolution, we preferred to use chemical inactivation in this case because we were interested in silencing cortex for the duration of the behavioral session. 
+
 % TODO: Do I want to finish this? 
 % If you leave the light on you can burn the brain 
 % Also, not all opsins can follow for long periods of time. 
@@ -536,266 +537,22 @@ While optogenetic methods are unparalleled in their ability to allow circuit man
 % %
 % Chemical inactivations don't have that issue. 
 
-
 \subsection{What did we learn from preliminary inactivations?}
-% Need to performance match
-% There is an effect on both, so it does make sense to compare the relative strength of inactivations rather than expect that a manipulation will affect one thing but not another. 
 We performed inactivations over many behavioral sessions in two trained animals, showing that this method allows us to resolve the effect of the manipulations on discrimination of each sound type. 
 %
-There are obvious next steps that should be addressed in any experiment going forward. 
+However, interpretation was hampered by the fact that pre-inactivation performance was not equivalent between the two sound types. 
 %
-First and foremost, the performance of animals on the psychometric categorizations for each sound type must be manipulated, by changing the range of stimuli presented, so that performance on the two discriminations is matched before manipulating cortical activity. 
+Therefore, it was not clear whether a decrease from 85\% correct to 75\% correct and decrease from 75\% correct to 65\% correct were effects of equivalent magnitude. 
+% 
+Future experiments should carefully match pre-inactivation performance between the sound types for each animal by adjusting the range of sounds presented during the psychometric sessions.
 %
-If pre-inactivation performance is the same on both sound types, then it becomes much easier to compare the changes in task performance for each sound type. 
-%
-For our preliminary inactivations, it was not clear whether a decrease from 85\% correct to 75\% correct and decrease from 75\% correct to 65\% correct were effects of equivalent magnitude. 
-% TODO: We attempted to address this by doing GLMER regression, talk about that here? 
-
+Nevertheless, it was clear from these inactivation experiments that there was an effect of cortical inactivation on discrimination of both sound types, and that evaluation of the relative necessity of sensory cortex for performing two discrimination of two different sound features will require precise comparison of the magnitude of the effect on each discrimination.
 
 \section{Link to Chapter V}
 In this chapter, we present a behavioral task for evaluating the effect of chemical inactivation of auditory cortex on frequency and AM rate discrimination performance. 
 %
-% TODO: Change this to highlight the results less. 
-We found that inactivation of auditory cortex resulted in reduction in performance for both types of discriminations, with similar (and not statistically significantly different) effect magnitude. 
+% DONE: Change this to highlight the results less. 
+This behavioral paradigm provides a platform for evaluating the effect of a manipulation of neural activity on discrimination of two different stimuli, in order to address the question: Is the information provided by sensory cortex to downstream areas necessary for discrimination of some types of sounds, while discrimination of other sound types can be performed using information from subcortical pathways alone?
 %
 In the next chapter, we expand from considering just the role of auditory cortex in the context of this task, to examine the role of other sensory cortical regions in different tasks requiring animals to make flexible associations between stimuli and actions. 
 
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%% Old stuff below %%%%%%%%%%%%%%%%%
-
-
-% 
-% 
-% 
-% 
-% This behavioral paradigm solves several problems: 
-% %
-% Comparing two groups of animals means that you need to be able to correlate the size of each lesion / inactivation with the resulting behavioral deficits observed in each animal. 
-% %
-% For lesions this is more feasible, but for multiple sessions with reversible inactivation or optogenetic manipulations, this is not feasible. 
-% %
-% 
-% Having animals switch between tasks begins to allow for comparison of manipulations across sound types, although there are still a number of issues. 
-% %
-% Having an animal switch between sound types after a number of sessions would complicate any comparison because the 
-% 
-% 
-% This behavioral paradigm allows comparison of the same manipulation on 
-% 
-% 
-% 
-% 
-% 
-% In this chapter, I present a behavioral paradigm that can be used to evaluate
-% the effects of reversible chemical inactivation of a brain area on
-% discrimination of different stimuli. 
-% %
-% Using this paradigm, I trained mice to perform discriminations both of sound
-% frequency and of AM rate.
-% %
-% Reversible inactivation of AC with muscimol in animals trained on this task
-% caused deficits in discrimination of both stimuli. 
-% %
-% % It looks like the muscimol inactivation affects performance of both tasks to
-% % a similar degree. Several possible reasons for this: DONE: This is a bad
-% % sentence.
-% There are several possible explanations for these results. 
-% 
-% % TODO: I think there is a better way to go about this. Instead of focusing hard on the results of the inactivations (which are really preliminary with only two mice) I should talk more about the behavior here and why we need something like this.
-% %
-% % TODO: Then use the inactivation data to highlight some of the analysis concerns (like the need to performance match).
-% %
-% % TODO: This avoids the necessity to really go after the comparison to the lesion studies (which aren't super clear anyway) and simply explain why the data is tough to analyze and what can be done about it.
-% 
-% %%%%% Analysis considerations %%%%%
-% % Have to performance match, because it's hard to compare across the performance space. 
-% % Fluorescent muscimol, optogenetics, or lesions? How to combine them for best information? 
-% 
-% 
-% 
-% 
-% %
-% % TODO: I should probably remove the figure about the single sound types. 
-% 
-% 
-% % TODO: Better title here
-% \subsection{Why did we see effects of muscimol on both frequency and AM
-% discrimination?}
-% 
-% The effect of reversible inactivation of AC on frequency discrimination we observed in this pilot was somewhat stronger than the relatively minor frequency discrimination performance observed in rats after nearly complete lesions of AC in \citet{Gimenez2015}.
-% % Mice vs. Rats
-% This may be due to differences in the relative contribution of auditory cortex to frequency discrimination between these two species. 
-% % Don't know if muscimol is spreading farther
-% Also, muscimol may be spreading to inactivate cortical or subcortical areas outside the areas lesioned in \citet{Gimenez2015}.
-% % Cortical dependence due to switching
-% There is also the chance that auditory cortex is more involved in the performance of this task due to the switching involved.
-% % Permissive vs. Necessary with reversible inactivations.
-% Lastly, it is possible that the effect of sudden, reversible inactivation of AC overestimates this area's necessity because it leads to transient unbalancing in downstream areas that could, if given enough time, undergo homeostatic rebalancing. 
-% 
-% % TODO: Need to make sure I talk about what has to be improved for the future (ideally use fluorescent muscimol to track where it goes and performance match pre-muscimol by messing with the stimulus range.)
-% 
-% % TODO: Write better words
-% %% Downstream circuits are expecting input from AC, and don't have time to complete the homeostatic rebalancing necessary to make use of information from a single source.
-% One reason has to do with the necessary/permissive nature of the relationship
-% between a brain area and a behavior \citep{Otchy2015}.
-% %% Less likely that the task switching component is adding an additional layer of cortical dependence, as inactivation of AC before performance of either task alone leads to performance deficits. 
-% An alternative explanation is that the switching component of the task
-% introduced an additional process that depends on the cortex, outside of the
-% individual sound-action associations. 
-% %%% Subcortical circuits can accomplish significant flexibility on a short time scale (Gimenez paper) but this is switching every trial
-% However, I believe that this is less likely for three reasons.
-% 
-% First, rodents have been shown to be capable of remarkable levels of
-% flexibility after nearly-complete removal of auditory cortex, switching the
-% action associated with a particular sound several times during a single
-% behavioral session \citep{Gimenez2015}.
-% %
-% %%% During training, animals learn each association independently (which takes the most time) and then learn to switch between them, which takes little time TODO: Plot this.
-% Second, animals took longest during the training steps in which they were
-% learning the individual sound-action associations, and took few trials to
-% achieve a high degree of accuracy after they started having to switch between
-% sound types in the same behavior session.
-% %%% Deficits caused by cortical inactivation also appear during individual AM or freq discrimination sessions, so not all effect can be related to switching. 
-% Lastly, we tested the effect of reversible AC inactivation during sessions with
-% only a single sound type in a subset of animals.
-% % TODO: I have to figure out why the effect of muscimol on frequency discrimination is so strong in the session's I've plotted. It's concerning.
-% %
-% We observed deficits in discrimination performance during sessions with only
-% tonal stimuli and during sessions with just AM stimuli, suggesting that the
-% sound-action associations themselves are impacted by cortical inactivation.
-% %
-% Nonetheless, it is worth evaluating whether the additional complexity
-% introduced by switching between sound types every other trial is really
-% required to answer our main question. 
-% 
-% \subsection{Why use this method if the switching might complicate things?}
-% 
-% % This method took a long time to learn and there is a chance that the
-% % switching component introduced additional complexity.
-% %
-% % So do we need to use the task? Why is this better than the alternatives? 
-% This task required mice to learn two different sound-action associations, and
-% then to switch back and forth between them every other trial of a behavior
-% session.
-% %
-% Though this method presents the obvious drawbacks of taking a long time to
-% learn and potentially engaging additional brain areas to mediate the switching,
-% it allows us to evaluate the effect of a single manipulation of brain activity
-% on both discrimination behaviors, which is critical to addressing our main
-% question.
-% 
-% % Attempts to evaluate the effect of reversible inactivations on several
-% % different discriminations are hampered by the time course of the
-% % inactivation, and the fact that a bolus delivered on one day may not reach
-% % the exact same tissue area as a bolus delivered the next day.
-% Attempts to compare the effect of inactivations on task performance in two
-% different groups of animals performing the same task would invariably be
-% hampered by the inability to tell precisely the extent and strength of the
-% inactivation across individuals.
-% %
-% Even optogenetics, as will be discussed below, cannot fully address this
-% problem, especially if we desire to compare the size of the effect on the two
-% different task types.
-% 
-% % Problems addressed by this method:
-% 
-% %% Hard to compare relative effects of inactivations on different tasks across animals (one task per animal)
-% %%% Lesions: Have to compare lesion area across animals
-% %%% Muscimol: Have to compare bolus between animals, which may be impossible (except maybe with fluorescent muscimol).
-% %%% Optogenetics: Have to try and compare inactivated area between animals, which may be impossible. TODO: Paper Ben K presented about photobleaching relevant here.
-% 
-% %% Many problems still persist if you have an animal perform both tasks, but not on the same day
-% %%% Lesions: Time course of homeostatic rebalancing may interfere if different tasks are performed sequentially over days
-% %%% Muscimol: A bolus one day is not directly equivalent to a bolus the next, and fluorescent muscimol can't help you at all with that. 
-% %%% Optogenetics: This is less of an issue for opto, where the effects of the laser should be roughly consistent from day to day. TODO: Anything about glia growth around fibers?
-% 
-% %% Having animals perform both tasks during the same behavior session addresses some of these sources of variation.
-% %%% Lesions: Circuit rebalancing should be occurring at roughly the same pace and affecting both discriminations across assessment days.
-% %%% Muscimol: The effect of a single bolus can be evaluated on both tasks.
-% %%% Optogenetics: The state of the fiber, tether, diode, etc that may vary from session to session are more controlled across the two tasks. 
-% 
-% \subsection{Are chemical inactivations useful in a world with optogenetics?}
-% % This is still an open question in my mind.
-% 
-% % TODO: Why use muscimol at all?? The problem that we are addressing with this
-% % interleaved task is that the inactivation wears off. This isn't as much of a
-% % problem with lesions, although there is still the possibility that downstream
-% % circuits are adapting to the changes, and so sampling different tasks on
-% % different days could still be a problem.
-% 
-% % Comparisons of lesions and optogenetics TODO: There is a paper doing visual
-% % cortex opto that argues against lesions.
-% %% Lesions: Allow time for downstream circuits to rebalance their inputs, potentially underestimating the contribution of other pathways.
-% %% Optogenetics: Near-instantaneous inactivation provides no chance for downstream circuits to rebalance, potentially overestimating the contribution of an area.
-% %% Muscimol: The worst of both worlds or better than both? Muscimol is like CNO (TODO: check arguments for CNO) but affects everything, not just HM4+ neurons, and may be stronger than HM4 inactivation (TODO: Check HM4 vs muscimol inactivation strength). Also, there is some evidence that CNO decomposes to clozapine and becomes active elsewhere besides just at the HM4 receptors (TODO: Check new CNO to clozapine study).
-% 
-% % TODO: Future improvements to the task include better initial performance
-% % matching
-% 
-% Lesion studies have long been the gold standard method for evaluating the
-% %
-% A potential confound of lesions studies is often discussed: That during the
-% time after the lesion, subcortical pathways reorganize to carry out the
-% function that was previously provided by the cortex.
-% %
-% This confound rightly prevents us from inferring that cortex \emph{does not}
-% play a role in some particular task, if it is found that an animal is able to
-% perform the task after a lesion of the cortex.
-% %
-% However, with emerging anatomical studies showing extensive convergence of
-% cortical and thalamic pathways onto structures like the striatum
-% \citep{Hunnicutt2016} it is likely that both the cortical and subcortical
-% pathways are providing information to downstream regions during normal
-% conditions.
-% %
-% The re-organization of subcortical pathways following cortical lesion could
-% simply be a homeostatic rebalancing of already-existing connections between the
-% subcortical pathway neurons and the downstream region.
-% %
-% In this context, we should interpret the persistence of a behavior after
-% cortical lesion to mean that the cortex wasn't providing necessary information
-% for that behavior, not that it wasn't involved at all.
-% 
-% % TODO: Cite Otchy and whatever paper was doing orientation change detection
-% % suppression in rats (Glickfeld and Maunsell)
-% Studies have repeatedly shown that fast, reversible inactivations (such as
-% those achieved with muscimol or various optogenetic methods) can lead to
-% different effects on the same behavior than are caused by lesions. 
-% %
-% % TODO: Getting harder to write here. Come back to this. 
-% 
-% Chemical inactivations complement lesions in the sense that they allow you to
-% test whether an area is providing information to downstream circuits under
-% normal conditions.
-% %
-% % TODO: this is shit and needs citations
-% Optogenetics is fancy and all, but has a few problems.
-% %
-% 1: You can't really leave the light on forever and expect things to work as
-% planned.
-% %
-% 2. Fast time-scale manipulations can cause local network effects and mess with
-% feedback inhibition and excitation, potentially messing everything up.
-% %
-% Chemical inactivations allow the brain area to reach a new steady-state that
-% will persist for roughly the length of time that the animal is performing the
-% behavior.
-% %
-% It might be possible to leave the light on if using cheeta or some other opsin
-% that doesn't get weaker over time, but you run the risk of frying the brain.
-% %
-% Chemical inactivations don't have that issue. 
-% 
-% % TODO: 
-% We should combine this task with rigorous combinations of transient inactivation and lesion studies to determine whether regions are truly necessary for task performance, or if they are permissive for task performance, in the sense that downstream areas receive connections and therefore transient inactivation will lead to unbalanced inputs that could be homeostatically rebalanced over time
-% 
