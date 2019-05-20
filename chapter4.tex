@@ -128,7 +128,7 @@ and tones, and 8 distinct modulation rates for AM sounds.
 Each behavioral session lasted 60 to 90 minutes.
 
 \subsection{Muscimol inactivation}
-% TODO: Change to match muscimol protocol for amod study.  @internet
+% DONE: Change to match muscimol protocol for amod study.  @internet
 Bilateral craniotomies were performed under stereotactic surgery over the
 posterior striatum (1.7 mm posterior to bregma, 3.55 mm lateral from midline)
 of mice trained in the two-alternative choice sound discrimination task.
@@ -147,7 +147,10 @@ Animals were head-fixed and allowed to run on a wheel during the injection.
 %
 Craniotomies were exposed by removing the silicon elastomer covering, and a glass pipette filled with reagent (either muscimol or saline) was lowered into the brain to a depth of 3.1 mm from brain surface using a micromanipulator.
 %
-A volume of 45 nl of muscimol (0.25 mg ml$^{-1}$, final dose of 11.25 ng per hemisphere) was injected under air pressure in each hemisphere at a rate of 90 nl min$^{-1}$.  %
+A volume of 45 nl of muscimol (0.25 mg ml$^{-1}$, final dose of 11.25 ng per bolus) was injected under air pressure in each hemisphere at a rate of 90 nl min$^{-1}$, twice per hemisphere.  %
+%
+One injection was given first at the front of the right craniotomy, then the front of the left craniotomy, then the rear right, and finally the rear of the left craniotomy. 
+%
 % Given the relationship between concentration and diffusion distance (from
 % Fick's law) and previous reports of muscimol effects on neuronal activity
 % \citep{Edeline2002}, we expect that by the first 10 minutes of the behavioral
@@ -157,9 +160,9 @@ A volume of 45 nl of muscimol (0.25 mg ml$^{-1}$, final dose of 11.25 ng per hem
 % striatum (approx. 1 mm A-P, 0.6 mm M-L, 1.5 mm D-V) that receives auditory
 % inputs \citep{Hunnicutt2016}.
 %
-The pipette was left in place for 60 seconds following the injection, then raised 0.5mm and left in place for another 60 seconds before being removed.
+The pipette was left in place for 60 seconds following each injection, then raised 0.5mm and left in place for another 60 seconds before being removed.
 %
-Injection in the second hemisphere was always completed within 10 minutes of the first injection.
+The entire injection procedure was completed within 30 minutes.
 %
 The craniotomies were then protected with a new silicon elastomer cap, and the mouse was placed back into its home cage for 30 minutes before starting the behavior session.
 %
@@ -176,7 +179,7 @@ Psychometric curve fitting was performed via constrained maximum likelihood to e
 %
 sourceforge.net}). Statistical comparisons were performed using non-parametric statistical tests with no assumption of normality. 
 %
-Generalized linear mixed models were fit with the R programming language (\url{https://www.r-project.org/}) using the `lme4' package (\url{http://lme4.r-forge.r-project.org/}).  %TODO: I need to put the GLMER results in this document...
+Generalized linear mixed models were fit with the R programming language (\url{https://www.r-project.org/}) using the `lme4' package (\url{http://lme4.r-forge.r-project.org/}).
 
 
 \section{Results}
@@ -275,7 +278,7 @@ P F            & Psychometric, Freq   & Categorize sound frequency              
 IC M           & If correct, Mixed    & Switch between sound types              & After correct side poke       & Animal performs \textgreater{}80\% correct \\
 P M            & Psychometric, Mixed  & Categorize both sound types             & After correct side poke       & Animal performs \textgreater{}80\% correct \\
 \end{tabular}}
-%TODO: Table caption (just review it one more time before nobody ever sees it again). 
+%DONE: Table caption (just review it one more time before nobody ever sees it again). 
 \caption{Stages of behavioral shaping.}{Animals progressed through 9 behavioral training stages during behavioral shaping.
 %
 Each stage was designed to teach the animal a new feature of the behavioral task.
@@ -368,8 +371,7 @@ identity of the bolus.
 In the null model, we allowed the intercept to differ between data from the two
 sound types.
 %
-This inclusion of a random intercept for different sound types was
-well-justified from the fact that animals often performed much better on the
+This inclusion of a random intercept for different sound types helped to account for the fact that animals often performed much better on the
 frequency discrimination trials than on AM discrimination trials.
 %
 Against this null model we compared a model which allowed both random
@@ -388,69 +390,69 @@ Therefore, we fail to reject the null hypothesis that the strength of the
 muscimol effect is the same for discrimination of frequency and AM rate. 
 
 % Inactivation caused deficits in discrimination of both types of stimuli.
-\begin{figure}[hp] \begin{center}
-	\includegraphics[width=6in]{figures/chapter4/figure_main_amod_effect}%
-\end{center} \caption{Reversible inactivation of AC impairs both frequency and
-AM discrimination.}{ \textbf{(A)} Frequency discrimination psychometric
-performance for subject 1, averaged over 5 saline sessions (black points) and 5
-muscimol sessions (red points).
-%
-\textbf{(B)} AM discrimination psychometric performance for subject 1, averaged
-over 5 saline sessions (black points) and 5 muscimol sessions (red points). 
-%
-\textbf{(C)} Average percent correct for subject 1, averaged over 5 saline
-sessions and 5 muscimol sessions.
-%
-Dotted line indicates the effect of muscimol injection on sound frequency
-discrimination performance. 
-%
-Solid line indicates the effect of muscimol injection on AM rate discrimination
-performance.
-%
-Error bars indicate 95\% binomial proportion confidence intervals.
-%
-\textbf{(D, E, F)} Same as A, B, and C, respectively, for subject 2.  }
-\end{figure}
-
-% The effect of inactivation is not different between the two stimuli (GLMER
-% results).
-
-\subsection{AC inactivation affects discrimination of both features when during
-sessions with a single sound type}
-% DONE: Did they learn both, and then get transferred to 2? Was it the same
-% between?
-For a subset of animals, we performed reversible inactivation of AC during
-sessions where subjects only had to discriminate a single sound type.
-%
-Under these conditions, we still observed an effect of muscimol both on
-psychometric performance (\textbf{\fig{\SinglePsy}}) and on overall percent
-correct (\textbf{\fig{\SingleSum}}).
-
-% We have a few sessions where we show that both discriminations are hurt
-% individually, arguing against the idea that the cortically-dependent part of
-% the task is the switching. 
-
-%%%%%%%%%%%%%%%%%%%%%%%% Figure Single Sound Type %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[hp] \begin{center}
-	\includegraphics[width=6in]{figures/chapter4/figure_single_sound_type}%
-\end{center} \caption{Muscimol affects each discrimination when performed
-independently.}{\textbf{(A)}  Example psychometric curve from sessions where an
-animal discriminated only high sound frequency from low sound frequency.
-Performance suffers in sessions where muscimol was injected in AC (red, 1
-session) compared to control saline injection (black, 1 session).
-% DONE: How to have number of sessions here? 
-%
-\textbf{(B)} Average percent correct for 4 animals during muscimol (red, 1
-session per animal) and saline (black, 1 session per animal) sessions. 
-%
-\textbf{(C)} Example psychometric curve from sessions where an animal
-discriminated only fast AM rates from slow AM rates. Performance suffers in
-sessions where muscimol was injected in AC (red, 4 sessions) compared to
-control saline injection (black, 4 sessions).
-%
-\textbf{(D)} Average percent correct for 2 animals during muscimol (red, 4
-sessions per animal) and saline (black, 4 sessions per animal) sessions.  }
-\end{figure}
+% \begin{figure}[hp] \begin{center}
+%     \includegraphics[width=6in]{figures/chapter4/figure_main_amod_effect}%
+% \end{center} \caption{Reversible inactivation of AC impairs both frequency and
+% AM discrimination.}{ \textbf{(A)} Frequency discrimination psychometric
+% performance for subject 1, averaged over 5 saline sessions (black points) and 5
+% muscimol sessions (red points).
+% %
+% \textbf{(B)} AM discrimination psychometric performance for subject 1, averaged
+% over 5 saline sessions (black points) and 5 muscimol sessions (red points). 
+% %
+% \textbf{(C)} Average percent correct for subject 1, averaged over 5 saline
+% sessions and 5 muscimol sessions.
+% %
+% Dotted line indicates the effect of muscimol injection on sound frequency
+% discrimination performance. 
+% %
+% Solid line indicates the effect of muscimol injection on AM rate discrimination
+% performance.
+% %
+% Error bars indicate 95\% binomial proportion confidence intervals.
+% %
+% \textbf{(D, E, F)} Same as A, B, and C, respectively, for subject 2.  }
+% \end{figure}
+% 
+% % The effect of inactivation is not different between the two stimuli (GLMER
+% % results).
+% 
+% \subsection{AC inactivation affects discrimination of both features when during
+% sessions with a single sound type}
+% % DONE: Did they learn both, and then get transferred to 2? Was it the same
+% % between?
+% For a subset of animals, we performed reversible inactivation of AC during
+% sessions where subjects only had to discriminate a single sound type.
+% %
+% Under these conditions, we still observed an effect of muscimol both on
+% psychometric performance (\textbf{\fig{\SinglePsy}}) and on overall percent
+% correct (\textbf{\fig{\SingleSum}}).
+% 
+% % We have a few sessions where we show that both discriminations are hurt
+% % individually, arguing against the idea that the cortically-dependent part of
+% % the task is the switching. 
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%% Figure Single Sound Type %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{figure}[hp] \begin{center}
+%     \includegraphics[width=6in]{figures/chapter4/figure_single_sound_type}%
+% \end{center} \caption{Muscimol affects each discrimination when performed
+% independently.}{\textbf{(A)}  Example psychometric curve from sessions where an
+% animal discriminated only high sound frequency from low sound frequency.
+% Performance suffers in sessions where muscimol was injected in AC (red, 1
+% session) compared to control saline injection (black, 1 session).
+% % DONE: How to have number of sessions here? 
+% %
+% \textbf{(B)} Average percent correct for 4 animals during muscimol (red, 1
+% session per animal) and saline (black, 1 session per animal) sessions. 
+% %
+% \textbf{(C)} Example psychometric curve from sessions where an animal
+% discriminated only fast AM rates from slow AM rates. Performance suffers in
+% sessions where muscimol was injected in AC (red, 4 sessions) compared to
+% control saline injection (black, 4 sessions).
+% %
+% \textbf{(D)} Average percent correct for 2 animals during muscimol (red, 4
+% sessions per animal) and saline (black, 4 sessions per animal) sessions.  }
+% \end{figure}
 
 
 \section{Discussion}
