@@ -101,6 +101,7 @@
 \RequirePackage{layouts}
 \RequirePackage[colorinlistoftodos]{todonotes}
 \RequirePackage{ragged2e}
+\RequirePackage{graphicx}
 \captionsetup{labelsep=space}
 \setlength\RaggedRightRightskip{0pt plus 1cm}
 \setlength\RaggedRightParindent{0.4in}
@@ -422,6 +423,10 @@ Degree awarded \@degreemonth ~\thedegreeyear
 \centerline{This work is licensed under a Creative Commons}
 \centerline{\textbf{Attribution-NonCommercial-NoDerivs (United States) License.}}
 \end{spacing}
+\vspace*{2ex}
+\begin{center}
+\includegraphics[width=0.15\textwidth]{by-nc-nd}
+\end{center}
 \fi
 \ifbound{\centering\@bounddisclaimer}\else\vfill\fi\vfil
 \fi}
