@@ -253,6 +253,9 @@ of this document.}
 \def\narrowdepartment#1{\gdef\@narrowdepartment{#1}}
 \def\advisor#1{\gdef\@advisor{#1}}
 \def\chair#1{\gdef\@chair{#1}}
+\def\institutionalrep#1{\gdef\@institutionalrep{#1}}
+\def\corememberone#1{\gdef\@corememberone{#1}}
+\def\coremembertwo#1{\gdef\@coremembertwo{#1}}
 \newif\if@cochair
 \if@dissertation
   \def\cochair#1{\gdef\@cochair{#1}\@cochairtrue}
@@ -396,9 +399,11 @@ This \@papertype\ has been accepted and approved
 \@cochair& Co-chair\\
 \fi
 \@advisor & Advisor\\
-\@committee\\ \\ 
+\@corememberone & Core Member \\
+\@coremembertwo & Core Member \\
+\@institutionalrep & Institutional Representative \\ \\
 and & \\ \\
-\@graddean & Dean of the Graduate School
+\@graddean & Vice Provost and Dean of the Graduate School
 \end{tabular}\\*[\baselineskip]
 Original approval signatures are on file with the
 University of Oregon Graduate School.\\*[\baselineskip]
