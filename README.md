@@ -13,6 +13,7 @@ reward are not well understood. The striatum, a brain region which receives soun
 information from the auditory cortex and auditory thalamus, and which can drive
 behavior via its outputs in the basal ganglia, represents a potential key hub in the
 pathway between sound and action.
+
 In this thesis, I investigate the role of striatal circuits in the context of
 sound-guided behavior, and compare parallel corticostriatal and thalamostriatal
 pathways that provide auditory information to the striatum. In Chapter II, I
@@ -27,6 +28,7 @@ of the cortico-striatal and thalamo-striatal pathways to discriminations of diff
 sound features. Finally, Chapter V provides a review of the role of cortical and
 subcortical pathways in other behavioral contexts, especially in tasks that require
 rapid flexibility.
+
 This dissertation includes previously published co-authored material.
 
 ## Full Text: 
